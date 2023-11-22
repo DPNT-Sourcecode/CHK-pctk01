@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeFaster.Runner", "src\BeFa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeFaster.App", "src\BeFaster.App\BeFaster.App.csproj", "{A791C7CB-2ABF-40A0-8D3B-93AA58C97AE5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeFaster.App.Tests", "BeFaster.App.Tests\BeFaster.App.Tests.csproj", "{F7445975-1815-45EE-8430-7564A8477C50}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{A791C7CB-2ABF-40A0-8D3B-93AA58C97AE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A791C7CB-2ABF-40A0-8D3B-93AA58C97AE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A791C7CB-2ABF-40A0-8D3B-93AA58C97AE5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7445975-1815-45EE-8430-7564A8477C50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7445975-1815-45EE-8430-7564A8477C50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7445975-1815-45EE-8430-7564A8477C50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7445975-1815-45EE-8430-7564A8477C50}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -29,3 +35,4 @@ Global
 		SolutionGuid = {502B552F-0111-41BF-9E92-96ABC31DB0EB}
 	EndGlobalSection
 EndGlobal
+
