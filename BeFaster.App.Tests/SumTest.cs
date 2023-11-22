@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using BeFaster.App.Solutions.SUM;
 using System;
 
 namespace BeFaster.App.Tests
@@ -15,11 +16,12 @@ namespace BeFaster.App.Tests
             int expect = 3;
 
             //act
-            var result = BeFaster.App.SumSolution(x, y);
+            var result = SumSolution.Sum(x, y);
 
             //assert
             Assert.AreEqual(expect, result);
         }
     }
 }
+
 
