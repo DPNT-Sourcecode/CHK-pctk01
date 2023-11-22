@@ -168,8 +168,8 @@ namespace BeFaster.App.Tests
         public void ShouldReturnPriceWithoutSpecialOfferItemPay2Take3()
         {
             //Arrange
-            string skus = "FF";
-            int expected = 20;
+            string skus = "FFFF";
+            int expected = 30;
 
             //act
             var result = CheckoutSolution.ComputePrice(skus);
@@ -179,5 +179,6 @@ namespace BeFaster.App.Tests
         }
     }
 }
+
 
 

@@ -37,9 +37,10 @@ namespace BeFaster.App.Solutions.CHK
             return new List<SpecialOfferItem>()
             {
                 new SpecialOfferItem(items.Find(i => i.Name.Equals("E")), 2, items.Find(i => i.Name.Equals("B"))),
-                new SpecialOfferItem(items.Find(i => i.Name.Equals("F")), 2, items.Find(i => i.Name.Equals("F")))
+                new SpecialOfferItem(items.Find(i => i.Name.Equals("F")), 3, items.Find(i => i.Name.Equals("F")))
             };
         }
     }
 }
+
 
