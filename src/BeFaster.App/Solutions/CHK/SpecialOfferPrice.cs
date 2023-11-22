@@ -6,18 +6,26 @@ using System.Threading.Tasks;
 
 namespace BeFaster.App.Solutions.CHK
 {
-    public class SpecialOfferItem : ISpecialOffer
+    public class SpecialOfferPrice : ISpecialOffer
     {
         public Item ItemOffer { get; set; }
         public int Quantity { get; set; }
-        public Item FreeItem { get; set; }
+        public int TotalPrice { get; set; }
 
-        public SpecialOfferItem(Item itemOffer, int quantity, Item freeItem)
+        public SpecialOfferPrice()
+        {
+            ItemOffer = new Item();
+            Quantity = 0;
+            TotalPrice = 0;
+        }
+
+        public SpecialOfferPrice(Item itemOffer, int quantity, int price)
         {
             ItemOffer = itemOffer;
             Quantity = quantity;
-            FreeItem = freeItem;
+            TotalPrice = price;
         }
     }
 }
+
 
