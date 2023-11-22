@@ -193,5 +193,3 @@ namespace BeFaster.App.Tests
         }
     }
 }
-
-

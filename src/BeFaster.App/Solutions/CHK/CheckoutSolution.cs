@@ -13,6 +13,7 @@ namespace BeFaster.App.Solutions.CHK
             var itemsStock = repository.StartShop();
             var specialOffersPrices = repository.StartSpecialOffersPrices(itemsStock);
             var specialOffersItems = repository.StartSpecialOffersItems(itemsStock);
+            var specialOffersAnyGroup = repository.StartSpecialOffersAnyGroup(itemsStock);
 
             var selectedItems = new Dictionary<Item, int>();
 
@@ -31,7 +32,7 @@ namespace BeFaster.App.Solutions.CHK
 
             var shopService = new ShopService();
 
-            return shopService.CalculateTotalPrice(selectedItems, specialOffersPrices, specialOffersItems);
+            return shopService.CalculateTotalPrice(selectedItems, specialOffersPrices, specialOffersItems, specialOffersAnyGroup);
         }
     }
 }

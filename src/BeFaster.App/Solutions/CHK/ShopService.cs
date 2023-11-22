@@ -9,7 +9,7 @@ namespace BeFaster.App.Solutions.CHK
 {
     public class ShopService
     {
-        public int CalculateTotalPrice(Dictionary<Item, int> items, List<SpecialOfferPrice> offersPrices, List<SpecialOfferItem> offersItems)
+        public int CalculateTotalPrice(Dictionary<Item, int> items, List<SpecialOfferPrice> offersPrices, List<SpecialOfferItem> offersItems, List<SpecialOfferAnyGroup> offersGroup)
         {
             ProcessSpecialOffersWithFreeItems(items, offersItems);
             var totalPrice = ProcessSpecialOffersWithBestPrices(items, offersPrices);
