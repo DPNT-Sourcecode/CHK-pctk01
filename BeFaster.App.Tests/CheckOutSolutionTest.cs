@@ -182,8 +182,8 @@ namespace BeFaster.App.Tests
         public void ShouldReturnPriceWithWithMultipleSpecialOffersBigList()
         {
             //Arrange
-            string skus = "ZYPPPPPPRRR";
-            int expected = 460;
+            string skus = "ZYPPPPPPRRRUUUVUVV";
+            int expected = 710;
 
             //act
             var result = CheckoutSolution.ComputePrice(skus);
@@ -193,4 +193,5 @@ namespace BeFaster.App.Tests
         }
     }
 }
+
 
