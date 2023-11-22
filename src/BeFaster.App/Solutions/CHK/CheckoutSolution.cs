@@ -1,5 +1,7 @@
-﻿using BeFaster.Runner.Exceptions;
+﻿using BeFaster.App.Solutions.CHK.Entities;
+using BeFaster.Runner.Exceptions;
 using System;
+using System.Collections.Generic;
 
 namespace BeFaster.App.Solutions.CHK
 {
@@ -9,11 +11,14 @@ namespace BeFaster.App.Solutions.CHK
         {
             var repository = new Repository();
             var itemsStock = repository.StartShop();
-            var specialOffersPrice = repository.StartSpecialOffersPrices(itemsStock);
+            var specialOffersPrices = repository.StartSpecialOffersPrices(itemsStock);
+            var specialOffersItems = repository.StartSpecialOffersItems(itemsStock);
+
+            var selectedItems = new Dictionary<Item, int>();
 
             try 
             { 
-                var selectedItems = Parse.ParseSkus(skus, itemsStock);
+                selectedItems = Parse.ParseSkus(skus, itemsStock);
             }
             catch (NullReferenceException)
             {
@@ -24,9 +29,12 @@ namespace BeFaster.App.Solutions.CHK
                 return -1;
             }
 
-            return 0;
+            var shopService = new ShopService();
+
+            return shopService.CalculateTotalPrice(selectedItems, specialOffersPrices, specialOffersItems);
         }
     }
 }
+
 
 

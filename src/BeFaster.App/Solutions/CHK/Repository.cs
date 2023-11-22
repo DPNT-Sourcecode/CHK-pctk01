@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BeFaster.App.Solutions.CHK.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -29,5 +30,14 @@ namespace BeFaster.App.Solutions.CHK
                 new SpecialOfferPrice(items.Find(i => i.Name.Equals("A")), 5, 200)
             };
         }
+
+        public List<SpecialOfferItem> StartSpecialOffersItems(List<Item> items)
+        {
+            return new List<SpecialOfferItem>()
+            {
+                new SpecialOfferItem(items.Find(i => i.Name.Equals("E")), 2, items.Find(i => i.Name.Equals("B")))
+            };
+        }
     }
 }
+
