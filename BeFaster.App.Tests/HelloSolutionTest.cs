@@ -10,7 +10,7 @@ namespace BeFaster.App.Tests
         public void ShouldReturnCorrectMessage()
         {
             //Arrenge
-            var expected = "Hello World!";
+            var expected = "Hello, World!";
 
             //act
             var result = HelloSolution.Hello("");
@@ -20,5 +20,3 @@ namespace BeFaster.App.Tests
         }
     }
 }
-
-
