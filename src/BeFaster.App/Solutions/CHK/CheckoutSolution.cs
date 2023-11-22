@@ -1,4 +1,5 @@
 ﻿using BeFaster.Runner.Exceptions;
+using System;
 
 namespace BeFaster.App.Solutions.CHK
 {
@@ -10,10 +11,22 @@ namespace BeFaster.App.Solutions.CHK
             var itemsStock = repository.StartShop();
             var specialOffersPrice = repository.StartSpecialOffersPrices(itemsStock);
 
-            var selectedItems = Parse.ParseSkus(skus, itemsStock);
+            try 
+            { 
+                var selectedItems = Parse.ParseSkus(skus, itemsStock);
+            }
+            catch (NullReferenceException)
+            {
+                return 0;
+            }
+            catch (ArgumentException)
+            {
+                return -1;
+            }
 
             return 0;
         }
     }
 }
+
 
