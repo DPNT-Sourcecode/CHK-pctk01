@@ -1,12 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using BeFaster.App.Solutions.HLO;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace BeFaster.App.Tests
 {
-    internal class HelloSolutionTest
+    [TestClass]
+    public class HelloSolutionTest
     {
+        [TestMethod]
+        public void ShouldReturnCorrectMessage()
+        {
+            //Arrenge
+            var expected = "Hello World.";
+
+            //act
+            var result = HelloSolution.Hello("");
+
+            //assert
+            Assert.AreEqual(expected, result);
+        }
     }
 }
+
