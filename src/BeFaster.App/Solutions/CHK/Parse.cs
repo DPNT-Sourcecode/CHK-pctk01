@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace BeFaster.App.Solutions.CHK
 {
-    public static class Parse
+    internal static class Parse
     {
-        public static Dictionary<Item, int> ParseSkus(string skus, List<Item> itemsStock)
+        internal static Dictionary<Item, int> ParseSkus(string skus, List<Item> itemsStock)
         {
             if (String.IsNullOrEmpty(skus) || String.IsNullOrWhiteSpace(skus))
             {
@@ -53,4 +53,5 @@ namespace BeFaster.App.Solutions.CHK
         }
     }
 }
+
 
