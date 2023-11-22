@@ -70,6 +70,25 @@ namespace BeFaster.App.Solutions.CHK
                 new SpecialOfferItem(items.Find(i => i.Name.Equals("U")), 4, items.Find(i => i.Name.Equals("U"))),
             };
         }
+
+        public List<SpecialOfferAnyGroup> StartSpecialOffersAnyGroup(List<Item> items)
+        {
+            return new List<SpecialOfferAnyGroup>()
+            {
+                new SpecialOfferAnyGroup(
+                        new List<Item>() {  items.Find(i => i.Name.Equals("S")), 
+                                            items.Find(i => i.Name.Equals("T")), 
+                                            items.Find(i => i.Name.Equals("X")), 
+                                            items.Find(i => i.Name.Equals("Y")),
+                                            items.Find(i => i.Name.Equals("Z"))
+                        },
+                        3,
+                        45
+                    ),
+
+            };
+        }
     }
 }
+
 
