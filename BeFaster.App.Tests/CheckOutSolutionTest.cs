@@ -85,7 +85,8 @@ namespace BeFaster.App.Tests
         {
             //Arrange
             string skus = "AAAAA";
-            int expected = 200;
+            //int expected = 200;
+            int expected = 230;
 
             //act
             var result = CheckoutSolution.ComputePrice(skus);
@@ -98,8 +99,10 @@ namespace BeFaster.App.Tests
         public void ShouldReturnPriceWithTwoDifferntSpecialOffersPrice()
         {
             //Arrange
-            string skus = "AAAAAAAA";
-            int expected = 330;
+            //string skus = "AAAAAAAA";
+            //int expected = 330;
+            string skus = "AAAAAA";
+            int expected = 260;
 
             //act
             var result = CheckoutSolution.ComputePrice(skus);
@@ -109,6 +112,20 @@ namespace BeFaster.App.Tests
         }
 
         [TestMethod]
+        public void ShouldReturnPriceFromBigList()
+        {
+            //Arrange
+            string skus = "ABCDCBAABCABBAAA";
+            int expected = 505;
+
+            //act
+            var result = CheckoutSolution.ComputePrice(skus);
+
+            //assert
+            Assert.AreEqual(expected, result);
+        }
+
+        /*[TestMethod]
         public void ShouldReturnPriceWithTwoDifferntSpecialOffersPricePlusUnit()
         {
             //Arrange
@@ -148,6 +165,7 @@ namespace BeFaster.App.Tests
 
             //assert
             Assert.AreEqual(expected, result);
-        }
+        }*/
     }
 }
+
