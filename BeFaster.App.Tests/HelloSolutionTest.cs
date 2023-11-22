@@ -10,13 +10,15 @@ namespace BeFaster.App.Tests
         public void ShouldReturnCorrectMessage()
         {
             //Arrenge
-            var expected = "Hello, World!";
+            var name = "John";
+            var expected = "Hello, John!";
 
             //act
-            var result = HelloSolution.Hello("");
+            var result = HelloSolution.Hello(name);
 
             //assert
             Assert.AreEqual(expected, result);
         }
     }
 }
+
