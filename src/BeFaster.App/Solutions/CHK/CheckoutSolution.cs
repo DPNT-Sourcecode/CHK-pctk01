@@ -6,7 +6,12 @@ namespace BeFaster.App.Solutions.CHK
     {
         public static int ComputePrice(string skus)
         {
-            throw new SolutionNotImplementedException();
+            var repository = new Repository();
+            var itemsStock = repository.StartShop();
+            var specialOffersPrice = repository.StartSpecialOffersPrices(itemsStock);
+
+            return 0;
         }
     }
 }
+
