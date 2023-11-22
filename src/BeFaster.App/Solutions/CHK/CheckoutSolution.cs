@@ -10,7 +10,10 @@ namespace BeFaster.App.Solutions.CHK
             var itemsStock = repository.StartShop();
             var specialOffersPrice = repository.StartSpecialOffersPrices(itemsStock);
 
+            var selectedItems = Parse.ParseSkus(skus, itemsStock);
+
             return 0;
         }
     }
 }
+

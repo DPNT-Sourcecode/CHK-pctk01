@@ -9,7 +9,7 @@ namespace BeFaster.App.Solutions.CHK
 {
     public static class Parse
     {
-        public static Dictionary<char, int> ParseSkus(string skus)
+        public static Dictionary<Item, int> ParseSkus(string skus, List<Item> itemsStock)
         {
             if (String.IsNullOrEmpty(skus) || String.IsNullOrWhiteSpace(skus))
             {
@@ -24,17 +24,23 @@ namespace BeFaster.App.Solutions.CHK
 
             if (match.Success)
             {
-                var items = new Dictionary<char, int>();
+                var items = new Dictionary<Item, int>();
 
                 foreach (char it in skus)
                 {
-                    if (items.ContainsKey(it))
+                    var item = itemsStock.FirstOrDefault(x => x.Name.Equals(it.ToString()));
+
+                    if(item == null)
                     {
-                        items[it]++;
+                        throw new ArgumentException("Invalid input.");
+                    }
+                    else if (items.ContainsKey(item))
+                    {
+                        items[item]++;
                     }
                     else
                     {
-                        items.Add(it, 1);
+                        items.Add(item, 1);
                     }
                 }
 
@@ -47,3 +53,4 @@ namespace BeFaster.App.Solutions.CHK
         }
     }
 }
+
