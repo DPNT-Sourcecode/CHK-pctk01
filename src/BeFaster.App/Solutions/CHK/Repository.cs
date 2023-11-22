@@ -80,8 +80,7 @@ namespace BeFaster.App.Solutions.CHK
                                             items.Find(i => i.Name.Equals("T")), 
                                             items.Find(i => i.Name.Equals("X")), 
                                             items.Find(i => i.Name.Equals("Y")),
-                                            items.Find(i => i.Name.Equals("Z"))
-                        },
+                                            items.Find(i => i.Name.Equals("Z")) },
                         3,
                         45
                     ),
@@ -90,5 +89,6 @@ namespace BeFaster.App.Solutions.CHK
         }
     }
 }
+
 
 
