@@ -13,6 +13,7 @@ namespace BeFaster.App.Solutions.CHK
         {
             ProcessSpecialOffersWithFreeItems(items, offersItems);
             var totalPrice = ProcessSpecialOffersWithBestPrices(items, offersPrices);
+            //group
 
             foreach (var it in items)
             {
@@ -78,6 +79,11 @@ namespace BeFaster.App.Solutions.CHK
             return totalPrice;
         }
 
+        private int ProcessSpecialOffersWithAnyGroup(Dictionary<Item, int> items, List<SpecialOfferAnyGroup> offers)
+        {
+            return 0;
+        }
+
         private SpecialOfferPrice CalculateBestOfferPrice(List<SpecialOfferPrice> offers)
         {
             decimal bestPrice = decimal.MaxValue;
@@ -98,3 +104,4 @@ namespace BeFaster.App.Solutions.CHK
         }
     }
 }
+
