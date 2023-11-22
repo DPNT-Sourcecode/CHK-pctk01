@@ -163,6 +163,21 @@ namespace BeFaster.App.Tests
             //assert
             Assert.AreEqual(expected, result);
         }
+
+        [TestMethod]
+        public void ShouldReturnPriceWithoutSpecialOfferItemPay2Take3()
+        {
+            //Arrange
+            string skus = "FF";
+            int expected = 20;
+
+            //act
+            var result = CheckoutSolution.ComputePrice(skus);
+
+            //assert
+            Assert.AreEqual(expected, result);
+        }
     }
 }
+
 
