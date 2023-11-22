@@ -49,6 +49,13 @@ namespace BeFaster.App.Solutions.CHK
                 new SpecialOfferPrice(items.Find(i => i.Name.Equals("A")), 3, 130),
                 new SpecialOfferPrice(items.Find(i => i.Name.Equals("B")), 2, 45),
                 new SpecialOfferPrice(items.Find(i => i.Name.Equals("A")), 5, 200),
+                new SpecialOfferPrice(items.Find(i => i.Name.Equals("H")), 5, 45),
+                new SpecialOfferPrice(items.Find(i => i.Name.Equals("H")), 10, 80),
+                new SpecialOfferPrice(items.Find(i => i.Name.Equals("K")), 2, 150),
+                new SpecialOfferPrice(items.Find(i => i.Name.Equals("P")), 5, 200),
+                new SpecialOfferPrice(items.Find(i => i.Name.Equals("Q")), 3, 80),
+                new SpecialOfferPrice(items.Find(i => i.Name.Equals("V")), 2, 90),
+                new SpecialOfferPrice(items.Find(i => i.Name.Equals("V")), 3, 130),
             };
         }
 
@@ -57,8 +64,12 @@ namespace BeFaster.App.Solutions.CHK
             return new List<SpecialOfferItem>()
             {
                 new SpecialOfferItem(items.Find(i => i.Name.Equals("E")), 2, items.Find(i => i.Name.Equals("B"))),
-                new SpecialOfferItem(items.Find(i => i.Name.Equals("F")), 3, items.Find(i => i.Name.Equals("F")))
+                new SpecialOfferItem(items.Find(i => i.Name.Equals("F")), 3, items.Find(i => i.Name.Equals("F"))),
+                new SpecialOfferItem(items.Find(i => i.Name.Equals("N")), 3, items.Find(i => i.Name.Equals("M"))),
+                new SpecialOfferItem(items.Find(i => i.Name.Equals("R")), 3, items.Find(i => i.Name.Equals("Q"))),
+                new SpecialOfferItem(items.Find(i => i.Name.Equals("U")), 4, items.Find(i => i.Name.Equals("U"))),
             };
         }
     }
 }
+
