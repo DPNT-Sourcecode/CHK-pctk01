@@ -179,7 +179,7 @@ namespace BeFaster.App.Tests
         }
 
         [TestMethod]
-        public void ShouldReturnPriceWithWithMultipleSpecialOffersBigList()
+        public void ShouldReturnPriceWithMultipleSpecialOffersBigList()
         {
             //Arrange
             string skus = "ZYPPPPPPRRRUUUVUVV";
@@ -191,5 +191,20 @@ namespace BeFaster.App.Tests
             //assert
             Assert.AreEqual(expected, result);
         }
+
+        [TestMethod]
+        public void ShouldReturnPriceWithSpecialOffersAnyGroup()
+        {
+            //Arrange
+            string skus = "YYSTTZZZ";
+            int expected = 130;
+
+            //act
+            var result = CheckoutSolution.ComputePrice(skus);
+
+            //assert
+            Assert.AreEqual(expected, result);
+        }
     }
 }
+

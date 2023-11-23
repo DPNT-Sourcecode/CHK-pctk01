@@ -13,7 +13,7 @@ namespace BeFaster.App.Solutions.CHK
         {
             ProcessSpecialOffersWithFreeItems(items, offersItems);
             var totalPrice = ProcessSpecialOffersWithBestPrices(items, offersPrices);
-            //group
+            totalPrice += ProcessSpecialOffersWithAnyGroup(items, offersGroup);
 
             foreach (var it in items)
             {
@@ -81,7 +81,48 @@ namespace BeFaster.App.Solutions.CHK
 
         private int ProcessSpecialOffersWithAnyGroup(Dictionary<Item, int> items, List<SpecialOfferAnyGroup> offers)
         {
-            return 0;
+            int totalPrice = 0;
+
+            foreach (var offer in offers)
+            {
+                var itemsToApplyOffer = new List<Item>();
+                int totalNumberOfItems = 0;
+
+                var itemsOrderedByExpensivePrice = offer.Items.OrderByDescending(x => x.Price);
+
+                foreach(var it in itemsOrderedByExpensivePrice)
+                {
+                    if (items.ContainsKey(it))
+                    {
+                        totalNumberOfItems += items[it];
+                        itemsToApplyOffer.Add(it);
+                    }
+                }
+
+                if(totalNumberOfItems >= offer.Quantity)
+                {
+                    int timesApplied = totalNumberOfItems / offer.Quantity; 
+                    int numberOfItemsToRemove = timesApplied * offer.Quantity;
+
+                    foreach(var it in itemsToApplyOffer)
+                    {
+                        if (items[it] >= numberOfItemsToRemove)
+                        {
+                            items[it] -= numberOfItemsToRemove;
+                            break;
+                        }
+                        else
+                        {
+                            numberOfItemsToRemove -= items[it];
+                            items[it] = 0;
+                        }
+                    }
+
+                    totalPrice += timesApplied * offer.TotalPrice;
+                }
+            }
+
+            return totalPrice;
         }
 
         private SpecialOfferPrice CalculateBestOfferPrice(List<SpecialOfferPrice> offers)
@@ -104,3 +145,4 @@ namespace BeFaster.App.Solutions.CHK
         }
     }
 }
+

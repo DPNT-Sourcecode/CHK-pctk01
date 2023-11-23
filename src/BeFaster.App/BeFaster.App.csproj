@@ -63,6 +63,7 @@
     <Compile Include="Solutions\CHK\CheckoutSolution.cs" />
     <Compile Include="Solutions\CHK\Entities\ISpecialOffer.cs" />
     <Compile Include="Solutions\CHK\Entities\Item.cs" />
+    <Compile Include="Solutions\CHK\Entities\SpecialOfferAnyGroup.cs" />
     <Compile Include="Solutions\CHK\Entities\SpecialOfferItem.cs" />
     <Compile Include="Solutions\CHK\Parse.cs" />
     <Compile Include="Solutions\CHK\Repository.cs" />
