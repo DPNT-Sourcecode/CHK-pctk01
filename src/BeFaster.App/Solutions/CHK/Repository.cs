@@ -51,7 +51,7 @@ namespace BeFaster.App.Solutions.CHK
                 new SpecialOfferPrice(items.Find(i => i.Name.Equals("B")), 2, 45),
                 new SpecialOfferPrice(items.Find(i => i.Name.Equals("H")), 5, 45),
                 new SpecialOfferPrice(items.Find(i => i.Name.Equals("H")), 10, 80),
-                new SpecialOfferPrice(items.Find(i => i.Name.Equals("K")), 2, 150),
+                new SpecialOfferPrice(items.Find(i => i.Name.Equals("K")), 2, 120),
                 new SpecialOfferPrice(items.Find(i => i.Name.Equals("P")), 5, 200),
                 new SpecialOfferPrice(items.Find(i => i.Name.Equals("Q")), 3, 80),
                 new SpecialOfferPrice(items.Find(i => i.Name.Equals("V")), 2, 90),
@@ -89,4 +89,5 @@ namespace BeFaster.App.Solutions.CHK
         }
     }
 }
+
 
