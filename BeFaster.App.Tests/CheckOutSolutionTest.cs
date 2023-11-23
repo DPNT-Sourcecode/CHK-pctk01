@@ -196,8 +196,8 @@ namespace BeFaster.App.Tests
         public void ShouldReturnPriceWithSpecialOffersAnyGroup()
         {
             //Arrange
-            string skus = "YYSTTZZZ";
-            int expected = 130;
+            string skus = "STYZZXX";
+            int expected = 107;
 
             //act
             var result = CheckoutSolution.ComputePrice(skus);
@@ -207,4 +207,5 @@ namespace BeFaster.App.Tests
         }
     }
 }
+
 
